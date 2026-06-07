@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PE-MANDIRI: Interactive English Module</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌟 PE-MANDIRI: Describing People & Daily Routines</h1>
+    <p>Target: SMP Grade 7 | Skill: Reading Comprehension | Curriculum: Kurikulum Merdeka</p>
+  </header>
+
+  <main>
+    <nav>
+      <button onclick="showSection('intro')" class="nav-btn active-btn">📖 Introduction</button>
+      <button onclick="showSection('lesson')" class="nav-btn">📚 Interactive Lesson</button>
+      <button onclick="showSection('quiz')" class="nav-btn">🧩 Quiz</button>
+    </nav>
+
+    <!-- ===== SECTION: INTRODUCTION ===== -->
+    <section id="intro" class="content active">
+      <h2>🎯 Learning Objectives</h2>
+      <ul>
+        <li>Identify key information from short descriptive texts about people and daily routines.</li>
+        <li>Understand descriptive adjectives and simple present tense in context.</li>
+        <li>Analyze characters' habits and predict outcomes based on textual evidence (HOTS).</li>
+        <li>Write simple descriptive sentences about people and activities.</li>
+      </ul>
+
+      <div class="info-box">
+        <h3>📋 Instructions</h3>
+        <p>1. Read the <strong>Interactive Lesson</strong> to learn key vocabulary.</p>
+        <p>2. Complete the <strong>Quiz</strong> section: 20 Multiple Choice + 5 Essay questions.</p>
+        <p>3. Click <em>"Next Question"</em> after answering. Your score will be tracked automatically!</p>
+      </div>
+
+      <div class="info-box hots-box">
+        <h3>🧠 HOTS Integration</h3>
+        <ul>
+          <li><strong>Analyze:</strong> Connect character traits with their actions.</li>
+          <li><strong>Evaluate:</strong> Judge why characters make certain choices.</li>
+          <li><strong>Create:</strong> Write your own descriptive sentences in the essay section.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: INTERACTIVE LESSON ===== -->
+    <section id="lesson" class="content">
+      <h2>📚 Interactive Lesson</h2>
+
+      <h3>🔑 Key Vocabulary</h3>
+      <div class="vocab-grid">
+        <div class="vocab-card">
+          <span class="vocab-word">Cheerful</span>
+          <span class="vocab-meaning">Happy and positive</span>
+        </div>
+        <div class="vocab-card">
+          <span class="vocab-word">Diligent</span>
+          <span class="vocab-meaning">Hardworking and careful</span>
+        </div>
+        <div class="vocab-card">
+          <span class="vocab-word">Disciplined</span>
+          <span class="vocab-meaning">Following rules and routines</span>
+        </div>
+        <div class="vocab-card">
+          <span class="vocab-word">Active</span>
+          <span class="vocab-meaning">Energetic and always moving</span>
+        </div>
+        <div class="vocab-card">
+          <span class="vocab-word">Helpful</span>
+          <span class="vocab-meaning">Ready to assist others</span>
+        </div>
+        <div class="vocab-card">
+          <span class="vocab-word">Responsible</span>
+          <span class="vocab-meaning">Reliable and trustworthy</span>
+        </div>
+      </div>
+
+      <div class="tips-box">
+        <h3>💡 Reading Tips</h3>
+        <ol>
+          <li>Read the text carefully to find keywords (names, places, colors, objects).</li>
+          <li>Use <strong>scanning</strong> technique: look for specific words that match the question.</li>
+          <li>Pay attention to <strong>time words</strong> (morning, afternoon, Sunday) and <strong>place words</strong> (park, school, river).</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: QUIZ ===== -->
+    <section id="quiz" class="content">
+      <div id="quiz-header">
+        <h2>🧠 Reading Comprehension Quiz</h2>
+        <div class="quiz-tabs">
+          <button onclick="switchQuizMode('mc')" id="mc-tab" class="quiz-tab active-tab">Multiple Choice (20)</button>
+          <button onclick="switchQuizMode('essay')" id="essay-tab" class="quiz-tab">Essay (5)</button>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+        </div>
+        <p id="progress-text">Question 1 of 20 | Total Score: 0</p>
+      </div>
+
+      <!-- Multiple Choice Container -->
+      <div id="mc-container">
+        <div id="question-context" class="context-box"></div>
+        <p id="question-text" class="question-text"></p>
+        <div class="options" id="options-container"></div>
+        <p id="feedback" class="feedback"></p>
+        <button id="next-btn" class="btn-primary" style="display:none;" onclick="nextMC()">Next Question →</button>
+      </div>
+
+      <!-- Essay Container -->
+      <div id="essay-container" style="display:none;">
+        <div id="essay-context" class="context-box"></div>
+        <p id="essay-question" class="question-text"></p>
+        <textarea id="essay-answer" class="essay-input" placeholder="Write your answer here..."></textarea>
+        <button onclick="submitEssay()" class="btn-primary">Submit Answer</button>
+        <p id="essay-feedback" class="feedback"></p>
+        <button id="essay-next-btn" class="btn-primary" style="display:none;" onclick="nextEssay()">Next Essay →</button>
+      </div>
+
+      <!-- Result Container -->
+      <div id="result-container" style="display:none;">
+        <h2>🎉 Quiz Completed!</h2>
+        <div id="result-content"></div>
+        <button onclick="restartQuiz()" class="btn-secondary">🔄 Retry Quiz</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed by: [Kelompok 2] | PE-MANDIRI Project 2026 | Kurikulum Merdeka</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
