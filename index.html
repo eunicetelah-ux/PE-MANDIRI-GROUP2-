@@ -1,140 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PE-MANDIRI: Interactive English Module</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-MANDIRI: Interactive English Module</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>🌟 PE-MANDIRI: Describing People & Daily Routines</h1>
+        <p>Target: SMP Grade 7 | Skill: Reading Comprehension | Curriculum: Kurikulum Merdeka</p>
+    </header>
 
-  <header>
-    <h1>🌟 PE-MANDIRI: Describing People & Daily Routines</h1>
-    <p>Target: SMP Grade 7 | Skill: Reading Comprehension | Curriculum: Kurikulum Merdeka</p>
-  </header>
-
-  <main>
     <nav>
-      <button onclick="showSection('intro')" class="nav-btn active-btn">📖 Introduction</button>
-      <button onclick="showSection('lesson')" class="nav-btn">📚 Interactive Lesson</button>
-      <button onclick="showSection('quiz')" class="nav-btn">🧩 Quiz</button>
+        <button class="nav-btn active-btn" onclick="showSection('intro')">📖 Introduction</button>
+        <button class="nav-btn" onclick="showSection('lesson')">📚 Interactive Lesson</button>
+        <button class="nav-btn" onclick="showSection('quiz')">🧩 Quiz</button>
     </nav>
 
-    <!-- ===== SECTION: INTRODUCTION ===== -->
-    <section id="intro" class="content active">
-      <h2>🎯 Learning Objectives</h2>
-      <ul>
-        <li>Identify key information from short descriptive texts about people and daily routines.</li>
-        <li>Understand descriptive adjectives and simple present tense in context.</li>
-        <li>Analyze characters' habits and predict outcomes based on textual evidence (HOTS).</li>
-        <li>Write simple descriptive sentences about people and activities.</li>
-      </ul>
-
-      <div class="info-box">
-        <h3>📋 Instructions</h3>
-        <p>1. Read the <strong>Interactive Lesson</strong> to learn key vocabulary.</p>
-        <p>2. Complete the <strong>Quiz</strong> section: 20 Multiple Choice + 5 Essay questions.</p>
-        <p>3. Click <em>"Next Question"</em> after answering. Your score will be tracked automatically!</p>
-      </div>
-
-      <div class="info-box hots-box">
-        <h3>🧠 HOTS Integration</h3>
+    <!-- INTRODUCTION SECTION -->
+    <div id="intro" class="content active">
+        <h2>🎯 Learning Objectives</h2>
         <ul>
-          <li><strong>Analyze:</strong> Connect character traits with their actions.</li>
-          <li><strong>Evaluate:</strong> Judge why characters make certain choices.</li>
-          <li><strong>Create:</strong> Write your own descriptive sentences in the essay section.</li>
+            <li>Identify key information from short descriptive texts about people and daily routines.</li>
+            <li>Understand descriptive adjectives and simple present tense in context.</li>
+            <li>Analyze characters' habits and predict outcomes based on textual evidence (HOTS).</li>
+            <li>Write simple descriptive sentences about people and activities.</li>
         </ul>
-      </div>
-    </section>
 
-    <!-- ===== SECTION: INTERACTIVE LESSON ===== -->
-    <section id="lesson" class="content">
-      <h2>📚 Interactive Lesson</h2>
-
-      <h3>🔑 Key Vocabulary</h3>
-      <div class="vocab-grid">
-        <div class="vocab-card">
-          <span class="vocab-word">Cheerful</span>
-          <span class="vocab-meaning">Happy and positive</span>
+        <div class="info-box">
+            <h3>📋 Instructions</h3>
+            <ol>
+                <li>Read the Interactive Lesson to learn key vocabulary.</li>
+                <li>Complete the Quiz section: 20 Multiple Choice + 5 Essay questions.</li>
+                <li>Click "Next Question" after answering. Your score will be tracked automatically!</li>
+            </ol>
         </div>
-        <div class="vocab-card">
-          <span class="vocab-word">Diligent</span>
-          <span class="vocab-meaning">Hardworking and careful</span>
-        </div>
-        <div class="vocab-card">
-          <span class="vocab-word">Disciplined</span>
-          <span class="vocab-meaning">Following rules and routines</span>
-        </div>
-        <div class="vocab-card">
-          <span class="vocab-word">Active</span>
-          <span class="vocab-meaning">Energetic and always moving</span>
-        </div>
-        <div class="vocab-card">
-          <span class="vocab-word">Helpful</span>
-          <span class="vocab-meaning">Ready to assist others</span>
-        </div>
-        <div class="vocab-card">
-          <span class="vocab-word">Responsible</span>
-          <span class="vocab-meaning">Reliable and trustworthy</span>
-        </div>
-      </div>
 
-      <div class="tips-box">
-        <h3>💡 Reading Tips</h3>
-        <ol>
-          <li>Read the text carefully to find keywords (names, places, colors, objects).</li>
-          <li>Use <strong>scanning</strong> technique: look for specific words that match the question.</li>
-          <li>Pay attention to <strong>time words</strong> (morning, afternoon, Sunday) and <strong>place words</strong> (park, school, river).</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== SECTION: QUIZ ===== -->
-    <section id="quiz" class="content">
-      <div id="quiz-header">
-        <h2>🧠 Reading Comprehension Quiz</h2>
-        <div class="quiz-tabs">
-          <button onclick="switchQuizMode('mc')" id="mc-tab" class="quiz-tab active-tab">Multiple Choice (20)</button>
-          <button onclick="switchQuizMode('essay')" id="essay-tab" class="quiz-tab">Essay (5)</button>
+        <div class="info-box hots-box">
+            <h3>🧠 HOTS Integration</h3>
+            <ul>
+                <li><strong>Analyze:</strong> Connect character traits with their actions.</li>
+                <li><strong>Evaluate:</strong> Judge why characters make certain choices.</li>
+                <li><strong>Create:</strong> Write your own descriptive sentences in the essay section.</li>
+            </ul>
         </div>
-        <div class="progress-bar">
-          <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+    </div>
+
+    <!-- LESSON SECTION -->
+    <div id="lesson" class="content">
+        <h2>📚 Interactive Lesson</h2>
+        
+        <h3>🔑 Key Vocabulary</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <span class="vocab-word">Cheerful</span>
+                <span class="vocab-meaning">Happy and positive</span>
+            </div>
+            <div class="vocab-card">
+                <span class="vocab-word">Diligent</span>
+                <span class="vocab-meaning">Hardworking and careful</span>
+            </div>
+            <div class="vocab-card">
+                <span class="vocab-word">Disciplined</span>
+                <span class="vocab-meaning">Following rules and routines</span>
+            </div>
+            <div class="vocab-card">
+                <span class="vocab-word">Active</span>
+                <span class="vocab-meaning">Energetic and always moving</span>
+            </div>
+            <div class="vocab-card">
+                <span class="vocab-word">Helpful</span>
+                <span class="vocab-meaning">Ready to assist others</span>
+            </div>
+            <div class="vocab-card">
+                <span class="vocab-word">Responsible</span>
+                <span class="vocab-meaning">Reliable and trustworthy</span>
+            </div>
         </div>
-        <p id="progress-text">Question 1 of 20 | Total Score: 0</p>
-      </div>
 
-      <!-- Multiple Choice Container -->
-      <div id="mc-container">
-        <div id="question-context" class="context-box"></div>
-        <p id="question-text" class="question-text"></p>
-        <div class="options" id="options-container"></div>
-        <p id="feedback" class="feedback"></p>
-        <button id="next-btn" class="btn-primary" style="display:none;" onclick="nextMC()">Next Question →</button>
-      </div>
+        <div class="tips-box">
+            <h3>💡 Reading Tips</h3>
+            <ul>
+                <li>Read the text carefully to find keywords (names, places, colors, objects).</li>
+                <li>Use scanning technique: look for specific words that match the question.</li>
+                <li>Pay attention to time words (morning, afternoon, Sunday) and place words (park, school, river).</li>
+            </ul>
+        </div>
+    </div>
 
-      <!-- Essay Container -->
-      <div id="essay-container" style="display:none;">
-        <div id="essay-context" class="context-box"></div>
-        <p id="essay-question" class="question-text"></p>
-        <textarea id="essay-answer" class="essay-input" placeholder="Write your answer here..."></textarea>
-        <button onclick="submitEssay()" class="btn-primary">Submit Answer</button>
-        <p id="essay-feedback" class="feedback"></p>
-        <button id="essay-next-btn" class="btn-primary" style="display:none;" onclick="nextEssay()">Next Essay →</button>
-      </div>
+    <!-- QUIZ SECTION -->
+    <div id="quiz" class="content">
+        <div id="quiz-header">
+            <h2>🧠 Reading Comprehension Quiz</h2>
+            <div class="quiz-tabs">
+                <button id="mc-tab" class="quiz-tab active-tab" onclick="switchQuizMode('mc')">Multiple Choice (20)</button>
+                <button id="essay-tab" class="quiz-tab" onclick="switchQuizMode('essay')">Essay (5)</button>
+            </div>
+        </div>
 
-      <!-- Result Container -->
-      <div id="result-container" style="display:none;">
-        <h2>🎉 Quiz Completed!</h2>
-        <div id="result-content"></div>
-        <button onclick="restartQuiz()" class="btn-secondary">🔄 Retry Quiz</button>
-      </div>
-    </section>
-  </main>
+        <!-- MULTIPLE CHOICE CONTAINER -->
+        <div id="mc-container">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="progress-text" style="text-align: center; font-weight: 600; color: #666;">Question 1 of 20 | Total Score: 0</p>
+            
+            <div id="question-context" class="context-box"></div>
+            <div id="question-text" class="question-text"></div>
+            <div id="options-container" class="options"></div>
+            <div id="feedback" class="feedback"></div>
+            <button id="next-btn" class="btn-primary" onclick="nextMC()" style="display: none;">Next Question →</button>
+        </div>
 
-  <footer>
-    <p>Developed by: [Kelompok 2] | PE-MANDIRI Project 2026 | Kurikulum Merdeka</p>
-  </footer>
+        <!-- ESSAY CONTAINER -->
+        <div id="essay-container" style="display: none;">
+            <div class="progress-bar">
+                <div id="essay-progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="essay-progress-text" style="text-align: center; font-weight: 600; color: #666;">Question 1 of 5</p>
+            
+            <div id="essay-context" class="context-box"></div>
+            <div id="essay-question" class="question-text"></div>
+            <textarea id="essay-answer" class="essay-input" placeholder="Write your answer here..."></textarea>
+            <div id="essay-feedback" class="feedback"></div>
+            <button class="btn-primary" onclick="submitEssay()">Submit Answer</button>
+            <button id="essay-next-btn" class="btn-secondary" onclick="nextEssay()" style="display: none;">Next Essay →</button>
+        </div>
 
-  <script src="app.js"></script>
+        <!-- RESULT CONTAINER -->
+        <div id="result-container" style="display: none; text-align: center; padding: 30px;">
+            <h2 style="color: #667eea; margin-bottom: 20px;">🎉 Quiz Completed!</h2>
+            <div id="result-content"></div>
+            <button class="btn-primary" onclick="restartQuiz()" style="margin-top: 25px;">🔄 Retry Quiz</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Developed by: [Nama Kelompok] | PE-MANDIRI Project 2026 | Kurikulum Merdeka</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
